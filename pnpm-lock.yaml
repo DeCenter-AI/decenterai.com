@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.0.11
     version: 1.0.11(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(viem@1.12.1)(wagmi@1.4.2)
   '@tableland/sdk':
-    specifier: 4.5.3-dev.0
-    version: 4.5.3-dev.0
+    specifier: ^4.5.1
+    version: 4.5.1
   '@types/node':
     specifier: 20.6.2
     version: 20.6.2
@@ -1149,8 +1149,8 @@ packages:
       '@openzeppelin/contracts': 4.8.3
     dev: false
 
-  /@tableland/sdk@4.5.3-dev.0:
-    resolution: {integrity: sha512-/DPLobOJliteQnS/L5hbkD9IhghR7cT8pzDmiWg3/ajg3UxmvGxnRkk1q+WplEMPkmhPzfgA0jk1aun68AzbQA==}
+  /@tableland/sdk@4.5.1:
+    resolution: {integrity: sha512-ffvZYA9v6eNFsPYWtYJFfPT48rgtPIY4VTdcJbV2so7r4XGPw7JY4qdkWNO+2J8l4vOR9dusiSOHKVhHsNWeOA==}
     dependencies:
       '@async-generators/from-emitter': 0.3.0
       '@tableland/evm': 4.3.0

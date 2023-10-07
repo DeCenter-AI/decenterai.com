@@ -11,7 +11,7 @@
   "dependencies": {
     "@lighthouse-web3/sdk": "^0.2.8",
     "@rainbow-me/rainbowkit": "^1.0.11",
-    "@tableland/sdk": "4.5.3-dev.0",
+    "@tableland/sdk": "^4.5.1",
     "@types/node": "20.6.2",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
