@@ -44,23 +44,10 @@ const Features = () => {
         },
       });
 
-      bot2.start({
-        y: 0,
-        x: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.8,
-        },
-      });
+
 
       //text animation
-      text1.start({
-        x: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.8,
-        },
-      });
+
     } else {
       bot1.start({
         y: "10vh",
@@ -71,19 +58,9 @@ const Features = () => {
         },
       });
 
-      bot2.start({
-        y: "40vh",
-        x: "-50vw",
-        opacity: 1,
-        transition: {
-          duration: 0.8,
-        },
-      });
 
-      text1.start({
-        x: "-50vw",
-        opacity: 0,
-      });
+
+
     }
   }, [inView]);
 
@@ -102,7 +79,7 @@ const Features = () => {
     } else {
       bot2.start({
         y: "10vh",
-        x: "1vw",
+
         opacity: 0,
         transition: {
           duration: 2,
@@ -126,7 +103,6 @@ const Features = () => {
     } else {
       bot3.start({
         y: "10vh",
-        x: "90vw",
         opacity: 0,
         transition: {
           duration: 2,
@@ -184,13 +160,13 @@ const Features = () => {
           className="absolute inset-0  w-[80%]  m-auto text-primary_1"
         >
           <h2 className="font-logirentBold text-center text-3xl mt-[15%]">
-            The Future of AI Model Training is Here
+            The Future of AI Model Training Is Here
           </h2>
 
           <div className="h-[70%] flex items-center  ">
-            <motion.div animate={text1} className="w-[50%] ">
+            <div className="w-[50%] ">
               <h2 className="font-logirentBold text-3xl leading-loose">
-                DECENTER TEAMS
+                Decenter Teams
               </h2>
 
               <p className="font-archivo text-xl">
@@ -204,7 +180,7 @@ const Features = () => {
                   tools
                 </li>
               </ul>
-            </motion.div>
+            </div>
             <motion.div animate={bot1} className="w-[50%] flex justify-center">
               <Image
                 src="/bot1.png"
@@ -240,7 +216,7 @@ const Features = () => {
             <div className="w-[50%]  flex flex-col items-center">
               <div className="w-fit">
                 <h2 className="font-logirentBold text-3xl leading-loose">
-                  DECENTERALISED AUTOTRAIN
+                  DecentralIsed AutotraIn
                 </h2>
                 <p className="font-archivo text-xl">
                   AI Tool for Quicker and More Efficient Model Training
@@ -271,7 +247,7 @@ const Features = () => {
                 ref={vRef3}
                 className="font-logirentBold text-3xl leading-loose"
               >
-                DECENTER REPOSITORY
+                Decenter reposItory
               </h2>
 
               <p className="font-archivo text-xl">
@@ -332,7 +308,7 @@ const Features = () => {
                 ref={vRef4}
                 className="font-logirentBold text-3xl leading-loose"
               >
-                DECENTER INCENTIVES
+                Decenter IncentIves
               </h2>
 
               <p className="font-archivo text-xl">
@@ -362,7 +338,7 @@ const Features = () => {
                 ref={vRef5}
                 className="font-logirentBold text-3xl leading-loose"
               >
-                TESTING AND ANALYTICS
+                TestIng And AnalytIcs
               </h2>
 
               <p className="font-archivo text-xl">
