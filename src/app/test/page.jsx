@@ -1,15 +1,16 @@
-"use client";
-import React from "react";
-import UploadFile from "../components/fvm/UploadFile";
+'use client'
+
+// testing page @techyNonso not for prod
+import React from 'react'
+import { createTable,add_user,add_user_models } from '../utils/tablelandUtils'
 
 const test = () => {
-  const parentCallback = (hash) => {
-    console.log(hash);
-  };
-  const extractFile = async (e) => {};
-  return (
-    <UploadFile parentCallback={parentCallback} extractFile={extractFile} />
-  );
-};
+  const handleClick = async (e) => {
+    e.preventDefault()
+    await add_user_models('abhay203@gmail.com','Somemodel','badfscc...')
+  }
 
-export default test;
+  return <button onClick={handleClick}>Test</button>
+}
+
+export default test
