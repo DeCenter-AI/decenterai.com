@@ -10,7 +10,7 @@ import {
   @params:
    tableName: human readable form of table
    fiels: formatted field input in form of string
-   fields arg for "users" table: id text primary key, name text, lastLoggedIn text, createdAt text, updatedAt text
+   fields arg for "users" table: id text primary key, passwod text, name text, lastLoggedIn text, createdAt text, updatedAt text
    fields arg for "user_models" table: id text primary key, userId text, name text, cid text , createdAt text, updatedAt text
 */
 
