@@ -13,7 +13,8 @@ import TransactionAuthorization from './modals/TransactionAuthorization';
 import TransactionProcessing from './modals/TransactionProcessing';
 import TransactionCompleted from './modals/TransactionCompleted';
 
-const page = () => {
+export default function Page (){
+    const pathname = usePathname();
     return (
         <DashLayout >
             <div className='w-full h-full flex items-center justify-center px-10 gap-10'>
@@ -169,4 +170,4 @@ const page = () => {
     );
 }
 
-export default page
+
