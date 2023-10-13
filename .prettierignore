@@ -1,1 +1,3 @@
-.github/workflows/prettier.yaml
+node_modules/
+.next/
+
