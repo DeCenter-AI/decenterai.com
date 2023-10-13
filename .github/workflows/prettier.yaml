@@ -31,8 +31,13 @@ jobs:
       #        run: |
       #          git config --global user.name Hiro
       #          git config --global user.email laciferin@gmail.com
+#      - name: Prettify code
+#        shell: bash
+#        run: |
+#          find . -type f -not -name "prettier.yaml"
+#        doesn't work as the prettier complains argument list is too long
 
-      #Fails to update workflow
+        # -exec prettier --write {} \;
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         env:
