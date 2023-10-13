@@ -25,7 +25,6 @@ jobs:
           version: 8.6.6
 
       - name: Set up Node.js
-        continue-on-error: true
         uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
