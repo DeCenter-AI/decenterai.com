@@ -38,8 +38,16 @@ jobs:
       #        doesn't work as the prettier complains argument list is too long
 
       - name: Ignore this workflow file
+        shell: bash
         run: |
           echo ".github/workflows/${github.workflow}.yaml" >> .prettierignore
+
+#        uses: "DamianReeves/write-file-action@master"
+#        with:
+#          path: .prettierignore
+#          write-mode: append
+#          contents: |
+#            .github/workflows/${ github.workflow}.yaml
 
       - name: Prettify code
         #        continue-on-error: true
