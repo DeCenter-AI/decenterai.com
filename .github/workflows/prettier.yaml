@@ -66,6 +66,23 @@ jobs:
 #          ignore path not necessary
 #          commit_options: '-c user.email laciferin@gmail.com'
 
+      - name: Remove prettier ignore
+        run: |
+          git checkout HEAD~ ".github/workflows/$GITHUB__WORKFLOW.yml"
+
+      - name: Commit & Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          repository: .
+          commit_message: 'style: pretty code'
+          commit_description: 'automated via ci'
+          file_pattern: ".github/workflows/$GITHUB__WORKFLOW.yml"
+          # commit_user_name: Nasfame
+          branch: ${{github.ref_name}}
+          create_branch: true
+
+
+
 #      - name: Prettify code except yaml files [executed cuz the actions tries to update ${{github.workflow}}.yaml
 #        if: $(failure())
 #        uses: creyD/prettier_action@v4.3
