@@ -29,8 +29,8 @@ jobs:
 
       - name: Git config
         run: |
-          git config user.name Nasfame
-          git config user.email laciferin@gmail.com
+          git config --global user.name Hiro
+          git config --global user.email laciferin@gmail.com
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
