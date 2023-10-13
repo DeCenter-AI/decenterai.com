@@ -37,11 +37,11 @@ jobs:
       #          find . -type f -not -name "prettier.yaml"
       #        doesn't work as the prettier complains argument list is too long
 
-      - name: Backup prettierignore
+      - name: Create .prettierignore
         shell: bash
         run: |
-          cp .prettierignore .prettierignore.tmp
-          echo ".github/workflows/${GITHUB_WORKFLOW}.yaml" >> .prettierignore.tmp
+          cp .prettierignore .prettierignore.ci
+          echo ".github/workflows/${GITHUB_WORKFLOW}.yaml" >> .prettierignore.ci
 
 #        uses: "DamianReeves/write-file-action@master"
 #        with:
@@ -63,7 +63,7 @@ jobs:
           commit_description: 'automated via ci'
           file_pattern: '*'
           only_changed: false
-          prettier_options: '--write . --ignore-path .prettierignore.tmp'
+          prettier_options: '--write . --ignore-path .prettierignore.ci'
 #          ignore path not necessary
 #          commit_options: '-c user.email laciferin@gmail.com'
 
