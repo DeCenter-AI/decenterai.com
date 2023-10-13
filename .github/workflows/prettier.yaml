@@ -43,7 +43,7 @@ jobs:
           file_pattern: '*'
           only_changed: false
           prettier_options: '--write .'
-          commit_options: '-c user.email laciferin@gmail.com'
+#          commit_options: '-c user.email laciferin@gmail.com'
 #          git_identity: "laciferin@gmail.com"
 #          prettier_plugins
 
