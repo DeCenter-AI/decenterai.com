@@ -1,10 +1,8 @@
 ## Related Issue(s)
 
-[//]:
-  #
-  "[Cite any related issue(s) or feature request(s) from the repository's issue tracker.]"
-
-Fixes # For #
+Fixes #
+<br>
+For #
 
 ## Proposed Changes
 
