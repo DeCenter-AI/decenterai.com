@@ -27,11 +27,12 @@ jobs:
           ref: ${{ github.head_ref }}
           persist-credentials: true
 
-#      - name: Git config
-#        run: |
-#          git config --global user.name Hiro
-#          git config --global user.email laciferin@gmail.com
+      #      - name: Git config
+      #        run: |
+      #          git config --global user.name Hiro
+      #          git config --global user.email laciferin@gmail.com
 
+      #Fails to update workflow
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         env:
