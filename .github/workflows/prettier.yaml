@@ -40,7 +40,7 @@ jobs:
       - name: Ignore this workflow file
         shell: bash
         run: |
-          echo ".github/workflows/${github.workflow}.yaml" >> .prettierignore
+          echo "${GITHUB_WORKFLOW}.yaml" >> .prettierignore
 
 #        uses: "DamianReeves/write-file-action@master"
 #        with:
