@@ -37,9 +37,12 @@ jobs:
       #          find . -type f -not -name "prettier.yaml"
       #        doesn't work as the prettier complains argument list is too long
 
-      # -exec prettier --write {} \;
+      - name: Ignore this workflow file
+        run: |
+          echo "${github.workflow}.yaml" >> .prettierignore
+
       - name: Prettify code
-#        continue-on-error: true
+        #        continue-on-error: true
         uses: creyD/prettier_action@v4.3
         env:
           GITHUB_ACTOR: ${{github.actor}}
@@ -51,7 +54,8 @@ jobs:
           commit_description: 'automated via ci'
           file_pattern: '*'
           only_changed: false
-          prettier_options: '--write .'
+          prettier_options: '--write . --ignore-path .prettierignore'
+#          ignore path not necessary
 #          commit_options: '-c user.email laciferin@gmail.com'
 
 #      - name: Prettify code except yaml files [executed cuz the actions tries to update ${{github.workflow}}.yaml
