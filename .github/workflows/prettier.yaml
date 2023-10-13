@@ -39,6 +39,7 @@ jobs:
 
       # -exec prettier --write {} \;
       - name: Prettify code
+#        continue-on-error: true
         uses: creyD/prettier_action@v4.3
         env:
           GITHUB_ACTOR: ${{github.actor}}
@@ -52,5 +53,18 @@ jobs:
           only_changed: false
           prettier_options: '--write .'
 #          commit_options: '-c user.email laciferin@gmail.com'
-#          prettier_plugins
 
+#      - name: Prettify code except yaml files [executed cuz the actions tries to update ${{github.workflow}}.yaml
+#        if: $(failure())
+#        uses: creyD/prettier_action@v4.3
+#        env:
+#          GITHUB_ACTOR: ${{github.actor}}
+#        with:
+#          dry: false
+#          github_token: ${{ github.token }}
+#          same_commit: false
+#          commit_message: 'style: pretty code'
+#          commit_description: 'automated via ci'
+#          file_pattern: "**/*.{js,jsx,ts,tsx,css,scss,html,vue,json,md}`"
+#          only_changed: false
+#          prettier_options: '--write .'
