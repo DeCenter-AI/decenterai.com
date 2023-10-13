@@ -39,7 +39,7 @@ jobs:
 
       - name: Ignore this workflow file
         run: |
-          echo "${github.workflow}.yaml" >> .prettierignore
+          echo ".github/workflows/${github.workflow}.yaml" >> .prettierignore
 
       - name: Prettify code
         #        continue-on-error: true
