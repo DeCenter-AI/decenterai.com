@@ -43,12 +43,12 @@ jobs:
           cp .prettierignore .prettierignore.ci
           echo ".github/workflows/${GITHUB_WORKFLOW}.yaml" >> .prettierignore.ci
 
-#        uses: "DamianReeves/write-file-action@master"
-#        with:
-#          path: .prettierignore
-#          write-mode: append
-#          contents: |
-#            .github/workflows/${ github.workflow}.yaml
+      #        uses: "DamianReeves/write-file-action@master"
+      #        with:
+      #          path: .prettierignore
+      #          write-mode: append
+      #          contents: |
+      #            .github/workflows/${ github.workflow}.yaml
 
       - name: Prettify code
         #        continue-on-error: true
@@ -66,7 +66,6 @@ jobs:
           prettier_options: '--write . --ignore-path .prettierignore.ci'
 #          ignore path not necessary
 #          commit_options: '-c user.email laciferin@gmail.com'
-
 
 #      - name: Prettify code except yaml files [executed cuz the actions tries to update ${{github.workflow}}.yaml
 #        if: $(failure())
