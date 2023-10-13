@@ -3,6 +3,7 @@ name: Cross
 on:
   push:
     branches:
+      - main
     tags:
 
   pull_request:
