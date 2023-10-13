@@ -28,7 +28,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
-          node-version: 19
+          node-version: 19.9.0 #last release of node v19
+          check-latest: false
 
       - name: Install dependencies
         run: pnpm install
