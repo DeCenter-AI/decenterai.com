@@ -37,10 +37,11 @@ jobs:
       #          find . -type f -not -name "prettier.yaml"
       #        doesn't work as the prettier complains argument list is too long
 
-      - name: Ignore this workflow file
+      - name: Backup prettierignore
         shell: bash
         run: |
-          echo ".github/workflows/${GITHUB_WORKFLOW}.yaml" >> .prettierignore
+          cp .prettierignore .prettierignore.tmp
+          echo ".github/workflows/${GITHUB_WORKFLOW}.yaml" >> .prettierignore.tmp
 
 #        uses: "DamianReeves/write-file-action@master"
 #        with:
@@ -62,25 +63,9 @@ jobs:
           commit_description: 'automated via ci'
           file_pattern: '*'
           only_changed: false
-          prettier_options: '--write . --ignore-path .prettierignore'
+          prettier_options: '--write . --ignore-path .prettierignore.tmp'
 #          ignore path not necessary
 #          commit_options: '-c user.email laciferin@gmail.com'
-
-      - name: Remove prettier ignore
-        run: |
-          git checkout HEAD~ ".github/workflows/$GITHUB__WORKFLOW.yml"
-
-      - name: Commit & Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          repository: .
-          commit_message: 'style: pretty code'
-          commit_description: 'automated via ci'
-          file_pattern: ".github/workflows/$GITHUB__WORKFLOW.yml"
-          # commit_user_name: Nasfame
-          branch: ${{github.ref_name}}
-          create_branch: true
-
 
 
 #      - name: Prettify code except yaml files [executed cuz the actions tries to update ${{github.workflow}}.yaml
