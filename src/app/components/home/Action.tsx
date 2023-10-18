@@ -33,7 +33,7 @@ const Action = () => {
 
           Get Started wIth our model Try Demo
         </h2>
-        <Link href="https://app.decenterai.com/explore">
+        <Link href="https://app.decenterai.com">
           <button className="bg-primary_11 mt-8 text-primary_1 font-semibold font-primaryArchivo py-2 px-3 cursor-pointer rounded-2xl">
             Try Demo
           </button>
