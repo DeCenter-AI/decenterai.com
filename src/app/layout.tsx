@@ -29,23 +29,6 @@ export const metadata: Metadata = {
   other: {
     'msapplication-TileColor': '#da532c',
   },
-  applicationName: AppName,
-  authors: [{ name: 'Hiro', url: 'https://bit.ly/m/laciferin' }],
-  keywords: ['DecenterAI', 'AI Infra'],
-  title: AppName,
-  description: AppDescription,
-  icons: [
-    { rel: 'icon', url: Favicon.src },
-    { rel: 'icon', sizes: '16x16', url: Favicon16x16.src },
-    { rel: 'icon', sizes: '32x32', url: Favicon32x32.src },
-    { rel: 'mask-icon', url: SafariPinnedTab.src, color: '#5bbad5' },
-    { rel: 'apple-touch-icon', url: AppleTouchIcon.src },
-  ],
-  manifest: AppSiteManifest,
-  themeColor: '#ffffff',
-  other: {
-    'msapplication-TileColor': '#da532c',
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
