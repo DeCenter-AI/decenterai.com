@@ -1,8 +1,11 @@
 import React from 'react'
+import Nav from '../components/presale/Nav'
 
 const PresalePage = () => {
   return (
-    <div>PresalePage</div>
+    <main className="bg-primary_13">
+      <Nav />
+    </main>
   )
 }
 
