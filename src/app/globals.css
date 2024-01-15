@@ -61,3 +61,8 @@ body {
   background-color: #ccc;
   border-radius: 100vw;
 }
+
+
+.presale-bg{
+  background:  lightgray 0% 0% / 100px 100px repeat, linear-gradient(64deg, #050505 49.13%, #191919 100%);
+}
