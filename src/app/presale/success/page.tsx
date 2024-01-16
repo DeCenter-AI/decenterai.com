@@ -7,11 +7,11 @@ const page = () => {
     <main className="presale-bg">
       <Nav />
 
-      <div className="flex flex-col gap-6 justify-center items-center h-[100vh]">
-        <Image src={logo} alt="Decenter logo" className="w-[40%] sm:w-[30%] md:w-[20%]" />
+      <div className="flex flex-col gap-6  items-center mt-12 md:mt-0 font-archivo shadow-xl  ">
+        <Image src={logo} alt="Decenter logo" className="w-[40%] sm:w-[20%] md:w-[15%]" />
 
-        <div className=" rounded-lg shadow bg-[rgba(5,5,5,0.80)] border border-[#232323] p-6 ">
-        
+        <div className=" rounded-lg shadow bg-[rgba(5,5,5,0.80)] border border-[#232323] p-6  w-[90%] mx-auto sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[30%] 2xl:w-[20%]">
+          
         </div>
       </div>
     </main>
