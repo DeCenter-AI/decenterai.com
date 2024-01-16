@@ -11,7 +11,7 @@ const PresalePage = () => {
   const price = 0.022
 
   return (
-    <main className="presale-bg">
+    <main className="w-full bg-primary_13">
       <Nav />
 
       <div className="flex flex-col gap-6  items-center mt-12 md:mt-0 font-archivo shadow-xl  ">
