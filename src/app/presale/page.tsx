@@ -4,10 +4,12 @@ import Nav from '../components/presale/Nav'
 import Image from 'next/image'
 import logo from 'public/logo-big.png'
 import { LuArrowBigDown } from 'react-icons/lu'
-import { Princess_Sofia } from 'next/font/google'
+import usdt from 'public/usdt.png'
+import icon from 'public/small.png'
 
 const PresalePage = () => {
   const price = 0.022
+
   return (
     <main className="presale-bg">
       <Nav />
