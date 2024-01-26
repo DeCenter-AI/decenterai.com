@@ -6,8 +6,6 @@ import logo from 'public/dec-logo.png'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from 'next/link';
 
-
-
 const Nav = () => {
   const [wallet, setWallet] = useState('Connect Wallet')
 
@@ -106,6 +104,7 @@ const Nav = () => {
         }}
       </ConnectButton.Custom>
     </nav>
+
   )
 }
 
