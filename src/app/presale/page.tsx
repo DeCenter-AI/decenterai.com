@@ -103,6 +103,8 @@ const PresalePage = () => {
     }
   }
 
+  console.log(maticFeed)
+
   const calcToken = (val: number) => {
     const decenInUSD = val * decenRate
     const amtInUSDT = decenInUSD * usdtRate
