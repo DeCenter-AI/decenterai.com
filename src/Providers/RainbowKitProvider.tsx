@@ -7,7 +7,6 @@ import { polygon, localhost, polygonMumbai } from 'wagmi/chains'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
 
-
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [localhost, polygon, polygonMumbai],
   [
@@ -24,23 +23,20 @@ const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
   publicClient,
-  webSocketPublicClient
+  webSocketPublicClient,
 })
 
-
 const appInfo = {
-  appName: "Decenterai"
+  appName: 'Decenterai',
 }
-
 
 function CustomRainbowKitProvider({ children }: { children: ReactNode }) {
   return (
-
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider
         chains={chains}
         appInfo={appInfo}
-        modalSize='compact'
+        modalSize="compact"
         theme={darkTheme()}
 
         coolMode
@@ -48,7 +44,6 @@ function CustomRainbowKitProvider({ children }: { children: ReactNode }) {
         {children}
       </RainbowKitProvider>
     </WagmiConfig>
-
   )
 }
 
