@@ -278,7 +278,7 @@ const PresalePage = () => {
 
             {!isLoading && <button
               type="submit"
-              className="text-base font-medium text-white opacity-40 bg-primary_8 p-2 rounded-full hover:bg-primary_7 ">
+              className="text-base font-medium text-primary_1  bg-primary_8 p-2 rounded-full hover:bg-primary_7 ">
               Proceed
             </button>}
 

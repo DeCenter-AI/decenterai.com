@@ -129,7 +129,7 @@ const Page = () => {
             {!isLoading && <button
               type="button"
               onClick={claimToken}
-              className="text-base  font-medium text-white opacity-40 bg-primary_8 p-2 rounded-full w-full mt-6 hover:bg-primary_7 ">
+              className="text-base  font-medium text-white  bg-primary_8 p-2 rounded-full w-full mt-6 hover:bg-primary_7 ">
               Proceed
             </button>}
 
