@@ -46,14 +46,14 @@ const Nav = () => {
               {(() => {
                 if (!connected) {
                   return (
-                    <button className='bg-primary_10 px-3 py-2 rounded-xl' onClick={openConnectModal} type="button">
+                    <button className='bg-primary_10 px-3 py-2 rounded-xl text-white' onClick={openConnectModal} type="button">
                       Connect Wallet
                     </button>
                   );
                 }
                 if (chain.unsupported) {
                   return (
-                    <button className='bg-red-600 px-3 py-2 rounded-xl' onClick={openChainModal} type="button">
+                    <button className='bg-red-600 px-3 py-2 rounded-xl text-white' onClick={openChainModal} type="button">
                       Wrong network
                     </button>
                   );
@@ -63,7 +63,7 @@ const Nav = () => {
                     <button
                       onClick={openChainModal}
                       style={{ display: 'flex', alignItems: 'center' }}
-                      className='bg-primary_10 px-3 py-2 rounded-xl'
+                      className='bg-primary_10 px-3 py-2 rounded-xl text-white'
                       type="button"
                     >
                       {chain.hasIcon && (
@@ -89,7 +89,7 @@ const Nav = () => {
                       {chain.name}
                     </button>
                     <button
-                      className='bg-primary_10 px-3 py-2 rounded-xl'
+                      className='bg-primary_10 px-3 py-2 rounded-xl text-white'
                       onClick={openAccountModal} type="button">
                       {account.displayName}
                       {account.displayBalance

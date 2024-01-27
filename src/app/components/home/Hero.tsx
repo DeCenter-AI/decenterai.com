@@ -123,8 +123,8 @@ const Hero = () => {
               </button>
             </Link>
 
-            <Link href="presale"><button className="border border-primary_11 text-sm text-primary_1 font-normal font-primaryArchivo py-1 md-py-2 px-3 cursor-pointer rounded-3xl">
-              DCEN
+            <Link href="presale"><button className="border border-primary_11 text-sm text-primary_1 font-normal font-primaryArchivo hover:border-white py-1 md-py-2 px-3 cursor-pointer rounded-3xl">
+              Buy DCEN
             </button></Link>
           </div>
         </div>
