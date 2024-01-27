@@ -75,6 +75,7 @@ const Page = () => {
     <main className="bg-primary_13 min-h-screen ">
 
       <div className='h-[15%] w-full max-h-[150px]'>
+
         <Nav />
 
       </div>
@@ -126,12 +127,13 @@ const Page = () => {
                 loading={isLoading}
                 data-testid="loader" color='#ffffff' />
             </div>
-            {!isLoading && <button
+           {!isLoading && <button
               type="button"
               onClick={claimToken}
               className="text-base  font-medium text-white  bg-primary_8 p-2 rounded-full w-full mt-6 hover:bg-primary_7 ">
               Proceed
             </button>}
+
 
           </div>
         </div>
