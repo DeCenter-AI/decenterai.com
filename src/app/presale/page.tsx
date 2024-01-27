@@ -30,12 +30,14 @@ const PresalePage = () => {
   const [decenField, setDecenField] = useState<string>('')
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const { data: maticFeed } = useContractRead({
+  const { data: maticFeed, isFetching: fetchingMatic, isLoading: loadingMatic } = useContractRead({
     abi: priceFeedAbi,
     address: `0x${process.env.NEXT_PUBLIC_MATIC_FEED_ADDRESS?.substring(2)}`,
     functionName: 'latestRoundData',
   })
-  const { data: usdtFeed } = useContractRead({
+
+
+  const { data: usdtFeed, isFetching: fetchingUsdt, isLoading: loadingUsdt } = useContractRead({
     abi: priceFeedAbi,
     address: `0x${process.env.NEXT_PUBLIC_USDT_FEED_ADDRESS?.substring(2)}`,
     functionName: 'latestRoundData',
@@ -120,20 +122,23 @@ const PresalePage = () => {
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
   ) => {
     setDecenField(e.target.value)
-    if (usdtRate == 0 && maticRate == 0) return
+
+    //if (usdtRate == 0 && maticRate == 0) return
     calcToken(Number(e.target.value))
   }
 
   const calcDecen = (val: number = Number(tokenField)) => {
     const usdtInUSD = val / usdtRate
     const maticInUSD = val / maticRate
-
+    // console.log(val, maticRate)
     let qtyDecen = 0
     if (selectedToken == 'USDT') {
       qtyDecen = usdtInUSD / decenRate
+
     } else if (selectedToken == 'MATIC') {
       qtyDecen = maticInUSD / decenRate
     }
+
 
     qtyDecen > 0 ? setDecenField(String(qtyDecen)) : setDecenField(String(0))
   }
@@ -142,19 +147,19 @@ const PresalePage = () => {
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
   ) => {
     setTokenField(e.target.value)
-    if (usdtRate == 0 && maticRate == 0) return
+    // if (usdtRate == 0 && maticRate == 0) return
     calcDecen(Number(e.target.value))
   }
 
   const handleMaticFeed = () => {
     //@ts-ignore
-    const maticUsd = maticFeed[1] / BigInt(Math.pow(10, 8))
+    const maticUsd = Number(maticFeed[1]) / Math.pow(10, 8)
     setMaticRate(Number(maticUsd))
   }
   const handleUsdtFeed = () => {
     //@ts-ignore
-    const usdtUsd = usdtFeed[1] / BigInt(Math.pow(10, 8))
-    setUsdtRate(Number(usdtUsd))
+    const usdtUsd = Number(usdtFeed[1]) / Math.pow(10, 8)
+    setUsdtRate(usdtUsd)
   }
 
   const depositNative = async () => {
@@ -173,6 +178,7 @@ const PresalePage = () => {
 
   const submitForm = (e: FormEvent) => {
     e.preventDefault()
+    if (!tokenField) return
     setIsLoading(true)
     if (selectedToken == 'USDT') {
       depositErc()
@@ -186,7 +192,7 @@ const PresalePage = () => {
     handleMaticFeed()
     handleUsdtFeed()
 
-  })
+  }, [maticFeed, usdtFeed])
 
   useEffect(() => {
     calcDecen()
@@ -244,9 +250,10 @@ const PresalePage = () => {
                   </label>
                   <input
                     type="number"
+                    disabled={loadingMatic || loadingUsdt || fetchingMatic || fetchingUsdt}
                     className="border text-white  rounded-2xl border-primary_10 bg-transparent focus-within:outline-none p-3  placeholder:px-2"
                     id="token"
-                    placeholder="0.0"
+                    placeholder={`${loadingMatic || loadingUsdt || fetchingMatic || fetchingUsdt ? "Please wait " : "0.0"}`}
                     onChange={(e) => changeToken(e)}
                     value={tokenField}
                   />
@@ -259,9 +266,10 @@ const PresalePage = () => {
                   </label>
                   <input
                     type="number"
+                    disabled={loadingMatic || loadingUsdt || fetchingMatic || fetchingUsdt}
                     className="border text-white  rounded-2xl border-primary_10 bg-transparent focus-within:outline-none p-3 placeholder:px-2"
                     id="dcen"
-                    placeholder="0.0"
+                    placeholder={`${loadingMatic || loadingUsdt || fetchingMatic || fetchingUsdt ? "Please wait " : "0.0"}`}
                     onChange={(e) => changeDecen(e)}
                     value={decenField}
                   />
