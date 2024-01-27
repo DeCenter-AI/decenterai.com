@@ -253,7 +253,7 @@ const PresalePage = () => {
                 </label>
                 <input
                   type="number"
-                  className="border  rounded-2xl border-primary_10 bg-transparent focus-within:outline-none p-3  placeholder:px-2"
+                  className="border text-white  rounded-2xl border-primary_10 bg-transparent focus-within:outline-none p-3  placeholder:px-2"
                   id="token"
                   placeholder="0.0"
                   onChange={(e) => changeToken(e)}
@@ -268,7 +268,7 @@ const PresalePage = () => {
                 </label>
                 <input
                   type="number"
-                  className="border  rounded-2xl border-primary_10 bg-transparent focus-within:outline-none p-3 placeholder:px-2"
+                  className="border text-white  rounded-2xl border-primary_10 bg-transparent focus-within:outline-none p-3 placeholder:px-2"
                   id="dcen"
                   placeholder="0.0"
                   onChange={(e) => changeDecen(e)}

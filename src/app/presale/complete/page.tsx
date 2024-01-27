@@ -78,7 +78,7 @@ const Page = () => {
 
   return (
     <main className="bg-primary_13 min-h-screen ">
-      <div className='h-[15%] w-full'>
+      <div className='h-[15%] w-full max-h-[150px]'>
         <Nav />
 
       </div>
