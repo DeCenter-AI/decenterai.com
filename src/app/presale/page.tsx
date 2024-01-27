@@ -223,6 +223,7 @@ const PresalePage = () => {
                         <PiCaretDown size={20} className="text-primary_7" />
                       </div>
 
+
                       {isDropdownOpen && (
                         <div className="absolute top-full left-0 bg-primary_10 rounded-lg mt-2 p-2">
                           <div
@@ -295,6 +296,7 @@ const PresalePage = () => {
                 <p className=" text-primary_7">Maximum Allocation</p>
                 <span className="font-medium text-primary_5">$25,000</span>
               </div>
+
             </div>
           </div>
         </div>

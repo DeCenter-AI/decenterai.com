@@ -58,6 +58,7 @@ const Nav = () => {
 
                     <button className='bg-primary_10 px-3 py-2 rounded-xl text-white' onClick={openConnectModal} type="button">
 
+
                       Connect Wallet
                     </button>
                   )
@@ -108,6 +109,7 @@ const Nav = () => {
 
                       className='bg-primary_10 px-3 py-2 rounded-xl text-white'
                       onClick={openAccountModal} type="button">
+
 
                       {account.displayName}
                       {account.displayBalance ? ` (${account.displayBalance})` : ''}
