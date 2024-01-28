@@ -86,7 +86,7 @@ const Team = () => {
             <div className="font-archivo text-sm font-semibold mt-6 flex justify-between items-center">
               <p>Glory (CMO)</p>
 
-              <Link href="https://www.linkedin.com/in/victor-kaycee/" target="_blank">
+              <Link href="https://www.linkedin.com/in/glorylucas/" target="_blank">
                 {' '}
                 <AiOutlineLinkedin size={30} className="pt-1 text-primary_7" />
               </Link>
